@@ -14,6 +14,7 @@ app.use(cors());
 app.use(router);
 io.on("connection", (socket) => {
   console.log("새로운 connection이 발생하였습니다.");
+  console.log(users);
   socket.on("disconnect", () => {
     console.log("유저가 떠났어요.");
   });
